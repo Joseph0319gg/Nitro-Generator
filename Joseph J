@@ -1,0 +1,22 @@
+import os, requests, random, threading, json, time, multiprocessing
+from colorama import Fore
+# Credit to Pycenter by billythegoat356
+# Github: https://github.com/billythegoat356/pycenter/
+# License: https://github.com/billythegoat356/pycenter/blob/main/LICENSE
+def center(var:str, space:int=None): # From Pycenter
+    if not space:
+        space = (os.get_terminal_size().columns - len(var.splitlines()[int(len(var.splitlines())/2)])) / 2
+    
+    return "\n".join((' ' * int(space)) + var for var in var.splitlines())
+class Console():        
+    def ui(self):
+        os.system(f'cls && title [DNG] Discord Nitro Generator  ^|  For Help join discord.gg/kaneki' if os.name == "nt" else "clear")
+        print(center(f"""\n\n
+██████╗ ███╗   ██╗ ██████╗ 
+██╔══██╗████╗  ██║██╔════╝            ~ Discord Nitro Generator ~
+██║  ██║██╔██╗ ██║██║  ███╗     
+██║  ██║██║╚██╗██║██║   ██║     github.com/kanekiWeb ~ discord.gg/kaneki
+██║  ██║██║╚██╗██║██║   ██║     github.com/kanekiWeb ~ skulldev.ga
+██████╔╝██║ ╚████║╚██████╔╝ 
+╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ \n\n
+              """).replace('█', Fore.CYAN+"█"+Fore.RESET).replace('~', Fore.CYAN+"~"+Fore.RESET).replace('-', Fore.CYAN+"-"+Fore.RESET))
